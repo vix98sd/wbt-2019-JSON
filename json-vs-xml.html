@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON - Template</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="json-vs-xml.css">
+
+
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid mb-0" style="background-image: url(pics/main.jpg);background-position: top;">
+        <div class="container text-center" style="color: white;">
+            <h1 class="display-4">Želite da saznate šta je to JSON?</h1>
+            <p class="lead">Na pravom ste mestu!</p>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <a class="navbar-brand mr-auto" href="pocetna.html">JSON</a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link active" href="pocetna.html">Početna<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="vise-o-json-u.html">Više o JSON-u</a>
+                    <a class="nav-item nav-link" href="json-struktura.html">JSON struktura</a>
+                    <a class="nav-item nav-link " href="json-tipovi-podataka.html">JSON tipovi podataka</a>
+                    <a class="nav-item nav-link " href="json-vs-xml.html">JSON vs XML</a>
+                    <a class="nav-item nav-link " href="javascript-i-json.html">JavaScript i JSON</a>
+                    <a class="nav-item nav-link " href="primeri.html">Primeri</a>
+                    <a class="nav-item nav-link " href="o-nama.html">O nama</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SADRŽAJ SAJTA -->
+    <div class="container">
+
+    <!-- Sekcija JSON vs XML -->
+
+        <div class="row ">
+            <div class="col text-center">
+                <p class="h3 m-3">JSON vs XML</p>
+                <hr class="heading-line">
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col text-justify mb-3">
+                <p class="lead">Kada je oblast primene u pitanju, JSON, kao i XML standard se najčešće mogu prinaći u
+                    komunikaciji između web servera i klijenta. Konkretno, koriste se za primanje podataka poslatih od
+                    strane web servera. U primerima koji slede možete uporediti JSON sintaksu sa sintaksom XML
+                    standarda, kojom je kreiran objekat employees, koji u sebi sadrži niz od nekoliko radnika. </p>
+            </div>
+        </div>
+
+        <!-- Kraj sekcije JSON vs XML -->
+        <!-- Kartice sa primerima kodova -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card bg-dark text-white mb-3 mx-auto" style="width: 90%;">
+                    <img class="card-img-top" src="pics/json-logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">JSON primer</h5>
+                        <hr class="bg-white">
+                        <p class="card-text text-white">
+                            <code>
+                        <ul class="list-unstyled">
+                            <li> {"employees":[</li>
+                            <li>{ "firstName":"<span class="text-white">John</span>", "lastName":"<span class="text-white">Doe</span>" },</li>
+                            <li>{ "firstName":"<span class="text-white">Anna</span>", "lastName":"<span class="text-white">Smith</span>" },</li>
+                            <li>{ "firstName":"<span class="text-white">Peter</span>", "lastName":"<span class="text-white">Jones</span>" }</li>
+                            <li>]}</li>
+                          </ul>
+                       </code>
+                        </p>
+                        <hr class="bg-white">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-dark text-white mb-3 mx-auto" style="width: 90%;">
+                    <img class="card-img-top" src="pics/xml-logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">XML primer</h5>
+                        <hr class="bg-white">
+                        <p class="card-text text-white">
+                            <code>
+                        <ul class="list-unstyled">
+                            <li>&lt;employees&gt;</li>
+                            <li>&emsp;&lt;employee&gt;</li>
+                            <li>&emsp;&emsp;&lt;firstName&gt;<span class="text-white">John</span>&lt;/firstName&gt;</li>
+                            <li>&emsp;&emsp;&lt;lastName&gt;<span class="text-white">Doe</span>&lt;/lastName&gt;</li>
+                            <li>&emsp;&lt;/employee&gt;</li>
+                            <li>&emsp;&lt;employee&gt;</li>
+                            <li>&emsp;&emsp;&lt;firstName&gt;<span class="text-white">Anna</span>&lt;/firstName&gt;</li>
+                            <li>&emsp;&emsp;&lt;lastName&gt;<span class="text-white">Smith</span>&lt;/lastName&gt;</li>
+                            <li>&emsp;&lt;/employee&gt;</li>
+                            <li>&emsp;&lt;employee&gt;</li>
+                            <li>&emsp;&emsp;&lt;firstName&gt;<span class="text-white">Peter</span>&lt;/firstName&gt;</li>
+                            <li>&emsp;&emsp;&lt;lastName&gt;<span class="text-white">Jones</span>&lt;/lastName&gt;</li>
+                            <li>&emsp;&lt;/employee&gt;</li>
+                            <li>&lt;/employees&gt;</li>
+                          </ul>     
+                       </code>
+                        </p>
+                        <hr class="bg-white">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sekcija Razlike i Sličnosti -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col text-center">
+                        <p class="h3 m-3">Razlike</p>
+                        <hr class="heading-line">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-justify mb-3">
+                        <p class="lead">
+                            JSON ima veoma jednostavnu strukturu, što nije odlika XML standarda, te mu nisu potrebni
+                            završni
+                            tagovi. Iz prethodne osobine proizilaze i sledeće dve. Ukoliko su u pitanju velike količine
+                            podataka koje je potrebno preneti JSON se pokazao veoma dobro, jer je sam JSON kod kraći te
+                            će
+                            zahtevati manje memorije, a prenos će biti brži. Zbog svoje jednostavne strukture i
+                            čitljivosti
+                            koda, JSOM je brži i lakši za pisanje.
+                        </p>
+                        <p class="lead">
+                            Kao jednu od bitnijih razlika, naveli bismo i to da JSON u svojoj strukturi ima ugrađenu
+                            podršku
+                            za nizove objekata, što znatno olakšava rad sa grupama podataka, dok je sa druge strane XML
+                            standard, čija struktura nema podršku za nizove, te je prilično teško odrediti kada je u
+                            pitanju
+                            niz podataka, a kada su podaci samo poređani jedan do drugog.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col text-center">
+                        <p class="h3 m-3">Sličnosti</p>
+                        <hr class="heading-line">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-justify mb-3">
+                        <p class="lead">
+                            Za JSON, kao i za XML, se može reći da su samo-opisujući, tačnije veoma su čitljivi za
+                            korisnika. Te korisnik sa lakoćom, na prvi pogled, može razumeti šta je svrha datog objekta.
+                            Oba standarda su hijerarhijski uređena, i svaki objekat se može sastojati od svojih
+                            podobjekata. Podacima predstavljenim u bilo kojoj od ove dve forme moguće je pristupiti
+                            korišćenjem XMLHttpRequest-a.
+                        </p>
+                        <p class="lead">
+                            Mnogi programski jezici, tačnije velika većina, podržavaju rad sa oba standarda, što nam
+                            daje do znanja da su oba jezika veoma rasprostranjena, ali da svaki ima kako svoje prednosti
+                            tako i svoje mane.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kraj sekcije Razlike i Sličnosti -->
+        <!-- Sekcija Gde se JSON pokazao bolje? -->
+
+        <div class="row ">
+            <div class="col text-center">
+                <p class="h3 m-3">Gde se JSON pokazao bolje?</p>
+                <hr class="heading-line">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-justify">
+                <p class="lead">
+                    XML je, zbog svoje složene strukture, znatno komplikovaniji za raščlanjivanje i izvlačenje podataka,
+                    u odnosu na JSON. Kada raščlanite JSON zapis, dobijate JavaScript objekat koji je spreman za
+                    korišćenje, što se ne može reći i za XML zapise.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-justify">
+                <p class="lead">
+                    XML je, zbog svoje složene strukture, znatno komplikovaniji za raščlanjivanje i izvlačenje podataka,
+                    u odnosu na JSON. Kada raščlanite JSON zapis, dobijate JavaScript objekat koji je spreman za
+                    korišćenje, što se ne može reći i za XML zapise.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-justify">
+                <p class="lead">
+                    Kod korišćenja XML zapisa prvo je potrebno dostaviti XML dokument, zatim koristiti XML DOM da bi se
+                    prošlo kroz čitav objekat, i na kraju je potrebno izvući i smestiti vrednosti u varijable. Kod JSON
+                    zapisa je ovaj proces malo drugačiji, jer nije potrebno dostaviti čitav dokument u kome se nalazi
+                    zapis, već je dovoljno poslati samo zapis u vidu stringa, te zatim taj zapis raščlaniti na ostale
+                    objekte.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m-3 text-center">
+                <img src="pics/json-vs-xml.png" class="img-fluid rounded mx-auto d-block" alt="Responsive image">
+                <p class="lead m-3">XML vs JSON kao procenat programabilnih web direktorijuma</p>
+            </div>
+        </div>
+        <!-- Kraj sekcije Gde se JSON pokazao bolje? -->
+    </div>
+    <!-- KRAJ SADRŽAJA STRANICE -->
+
+    <!-- FOOTER -->
+    <footer class="bg-dark py-3">
+
+        <ul class="nav text-white text-center justify-content-center flex-column flex-sm-row">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Upoznajte nas!</a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
