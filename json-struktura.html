@@ -18,6 +18,8 @@
             <p class="lead">Na pravom ste mestu!</p>
         </div>
     </div>
+
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
 
@@ -47,6 +49,7 @@
     <!-- TELO U KOME TREBA PISATI KOD -->
     <div class="container">
 
+        <!-- NASLOV STRANICE -->
         <div class="row">
             <div class="col text-center">
                 <p class="h3 m-3">JSON struktura</p>
@@ -54,6 +57,7 @@
             </div>
         </div>
 
+        <!-- PRVI PASUS, KARAKTERISTIČAN PO MARKIRANJU REČI "JavaScript" -->
         <p class="lead text-justify">
             JSON predstavlja tekstualnu datoteku čiji format podseća na format objekta koji podržava programski jezik
             <span class="text-purple">JavaScript</span>. Iako je kreiran po ugledu na <span
@@ -62,12 +66,14 @@
             da datoteka ne radi.<br>
         </p>
 
+        <!-- DRUGI PASUS, KARAKTERISTIČAN PO KORIŠĆENJU italic TAGA -->
         <p class="lead text-justify">
             Objekti čine uređen par <i>naziv - vrednost</i>. Objekti se okružuju vitičastim zagradama ("{" i "}").
             Inicijalni objekat se ne imenuje, dok se interni imenuju korišćenjem tekstualnog tipa podatka i znakom
             ":".<br>
         </p>
 
+        <!-- TREĆI PASUS, KARAKTERISTIČAN PO MARKIRANJU REČI "JavaScript" -->
         <p class="lead text-justify">
             Nizovi predstavljaju listu vrednosti. Kao što je već navedeno, JSON ima izgled sličan <span
                 class="text-purple">JavaScript</span> objektu. Sličan, iz razloga što je niz kao takav samodovoljan da
@@ -76,7 +82,10 @@
             0.<br>
         </p>
 
+        <!-- RED KOJI SADRŽI DVE KOLONE -->
         <div class="row mb-3">
+            <!-- KOLONA KOJA SE NA VELIKIM EKRANIMA PRIKAZUJE NA 50% EKRANA, DOK SE NA SREDNJIM I MALIM PRIKAZUJE -->
+            <!-- NA 100% EKRANA -->
             <div class="col-lg-6 col-md-12">
                 <div class="row">
                     <div class="col text-center">
@@ -86,6 +95,7 @@
                 </div>
                 <p class="lead">JSON takođe podržava iste tipove podataka kao i standardni <span
                         class="text-purple">JavaScript</span> objekti:</p>
+                <!-- LISTA KOJA SADRŽI LISTU U CILJU POSTIZANJA EFEKTA PODLISTE -->
                 <ul>
                     <li>
                         <ul>
@@ -119,7 +129,12 @@
 
             </div>
             <div class="col-lg-6 col-md-12 bg-dark">
+                <!-- CODE TAG ČINI DA TEKST IMA GRIMIZNU BOJU I SPECIFIČAN FONT -->
                 <code>
+                    <!-- LISTA KOJOJ SU UKLONJENI BULLET-I U CILJU ČISTIJEG FORMATA -->
+                    <!-- TEKSTUALNE VREDNOSTI SU OBOJENE ZELENOM BOJOM RADI ISTICANJA -->
+                    <!-- NUMERIČKE VREDNOSTI SU OBOJENE LJUBIČASTOM BOJOM RADI ISTICANJA -->
+                    <!-- KORIŠĆENJEM HTML KODOVA POPUT &emsp I &longleftarrow UNOSE SE SIMBOLI TAB I STRELICA ULEVO -->
                     <ul class="list-unstyled ml-5">
                         <li>{<span class="arrow">&longleftarrow;Početak inicijalnog objekta</span></li>
                         <li>&emsp;"Naziv": <span class="text-green">"Ubiti pticu rugalicu"</span>,</li>
@@ -148,6 +163,7 @@
             </div>
         </div>
 
+        <!-- TEKSTOVI KOJI SLEDE SADRŽE OBJAŠNJENJE PRIMERA UZ KORIŠĆENJE ISTIH BOJA KAO I U PRIMERU -->
         <div class="row">
             <div class="col-12">
                 <div class="row">
@@ -214,18 +230,19 @@
                 </p>
             </div>
         </div>
-
     </div>
-    <footer class="bg-dark py-3">
 
+    <!-- PODNOŽJE STRANICE -->
+    <footer class="bg-dark py-3">
         <ul class="nav text-white text-center justify-content-center flex-column flex-sm-row">
             <li class="nav-item">
-               <a class="nav-link text-white" href="o-nama.html">Upoznajte nas!</a>
-               <p>Copyright &#169; 2020, Fakultet tehničkih nauka u Čačku. All Rights Reserved</p>
+                <a class="nav-link text-white" href="o-nama.html">Upoznajte nas!</a>
+                <p>Copyright &#169; 2020, Fakultet tehničkih nauka u Čačku. All Rights Reserved</p>
             </li>
         </ul>
     </footer>
 
+    <!-- SKRIPTE NEOPHODNE ZA FUNKCIONISANJE SAJTA -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
