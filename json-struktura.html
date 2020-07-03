@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON - Template</title>
+    <title>JSON struktura</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -52,13 +52,38 @@
             </div>
         </div>
 
-        <p class="lead">
+        <p class="lead text-justify">
             JSON predstavlja tekstualnu datoteku čiji format podseća na format objekta koji podržava programski jezik
-            JavaScript.<br><br>
+            <span class="text-purple">JavaScript</span>. Iako je kreiran po ugledu na <span
+                class="text-purple">JavaScript</span>, može se koristiti i van njega. JSON je format podataka, što znači
+            da ne može obuhvatati metode. I najsitnija greška pri korišćenju zareza može izazvati JSON grešku i učiniti
+            da datoteka ne radi.<br>
         </p>
+
+        <p class="lead text-justify">
+            Objekti čine uređen par <i>naziv - vrednost</i>. Objekti se okružuju vitičastim zagradama ("{" i "}").
+            Inicijalni objekat se ne imenuje, dok se interni imenuju korišćenjem tekstualnog tipa podatka i znakom
+            ":".<br>
+        </p>
+
+        <p class="lead text-justify">
+            Nizovi predstavljaju listu vrednosti. Kao što je već navedeno, JSON ima izgled sličan <span
+                class="text-purple">JavaScript</span> objektu. Sličan, iz razloga što je niz kao takav samodovoljan da
+            predstavlja JSON objekat. Nizovi se okružuju uglastim zagradama ("[" i "]"). Pristup elementima niza vrši se
+            preko indeksa, koji, kao i kod programskog jezika <span class="text-purple">JavaScript</span>, počinju od
+            0.<br>
+        </p>
+
         <div class="row mb-3">
             <div class="col-lg-6 col-md-12">
-                <p class="lead">JSON takođe podržava iste tipove podataka kao i standardni JavaScript objekti:</p>
+                <div class="row">
+                    <div class="col text-center">
+                        <p class="h3 m-3">Tipovi podataka</p>
+                        <hr class="heading-line">
+                    </div>
+                </div>
+                <p class="lead">JSON takođe podržava iste tipove podataka kao i standardni <span
+                        class="text-purple">JavaScript</span> objekti:</p>
                 <ul>
                     <li>
                         <ul>
@@ -94,7 +119,7 @@
             <div class="col-lg-6 col-md-12 bg-dark">
                 <code>
                     <ul class="list-unstyled ml-5">
-                        <li>{<span class="arrow">&longleftarrow;Početak objekta</span></li>
+                        <li>{<span class="arrow">&longleftarrow;Početak inicijalnog objekta</span></li>
                         <li>&emsp;"Naziv": <span class="text-green">"Ubiti pticu rugalicu"</span>,</li>
                         <li>&emsp;"Author": <span class="text-green">"Robert Galbraith"</span>,</li>
                         <li>&emsp;"Žanr": <span class="text-green">"klasik krimi novela"</span>,</li>
@@ -115,13 +140,77 @@
                         <li>&emsp;&emsp;&emsp;"Cena": <span class="text-purple">700</span>,</li>
                         <li>&emsp;&emsp;}<span class="arrow">&longleftarrow;Kraj objekta</span></li>
                         <li>&emsp;]<span class="arrow">&longleftarrow;Kraj niza</span></li>
-                        <li>}<span class="arrow">&longleftarrow;Kraj objekta</span></li>
+                        <li>}<span class="arrow">&longleftarrow;Kraj inicijalnog objekta</span></li>
                     </ul>
                 </code>
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col text-center">
+                        <p class="h3 m-3">Objašnjenje primera</p>
+                        <hr class="heading-line">
+                    </div>
+                </div>
+                <p class="lead text-justify">Sav sadržaj JSON datoteke sadržan je u inicijalnom objektu, ograničenom
+                    vitičastim
+                    zagradama i neimenovanom. Interni objekti se mogu prepoznati po izgledu koji karakterišu naziv,
+                    dvotačka i vrednost. Na ovom primeru ističu se:<br>
+                    <span class="text-green ml-3">"Naziv": "Ubiti pticu rugalicu"</span>,<br>
+                    <span class="text-green ml-3">"Author": "Robert Galbraith"</span>,<br>
+                    <span class="text-green ml-3">"Žanr": "klasik krimi novela"</span>,<br>
+                    i ostali. </p>
+                <p class="lead text-justify">
+                    Labela <span class="text-green">"Detalji"</span> sadrži u sebi objekat, koji se, ponovo, sastoji od
+                    nekoliko parova naziv - vrednost.
+                </p>
+                <p class="lead text-justify">
+                    Labela <span class="text-green">"Cena"</span> sadrži naziv, koji sadi dva različita objekta pod
+                    istom jurisdikcijom. Ova labela može biti i primer ugnježdavanja (slučaj kada tip predstavlja
+                    element drugog tipa) u JSON-u.<br>
+                    <code class="lead">Važno!</code> Brojevi nikada nisu okruženi znacima navoda!
+                </p>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col text-center">
+                        <p class="h3 m-3">Pristup elementima</p>
+                        <hr class="heading-line">
+                    </div>
+                </div>
+                <p class="lead text-justify">
+                    Za pristup elementima koristi se hijerarhijski pristup (od roditelja ka detetu) i notacija
+                    tačka/uglasta zagrada, karakteristična za <span class="text-purple">JavaScript</span>, i to:
+                </p>
+                <p class="lead text-justify ml-3">
+                    Za pristup broju strana koriste se imena svojstava koja vode do atributa razdvojena tačkama ili
+                    ograđena uglastim zagradama.<br>
+                    <span class="text-green ml-3">
+                        Detalji.Strana
+                    </span><br>
+                    ili<br>
+                    <span class="text-green ml-3">
+                        ["Detalji"]["Strana"]
+                    </span><br>
+                </p>
+                <p class="lead text-justify ml-3">
+                    Za pristup ceni džepnog izdanja koriste se imena svojstava koja vode do atributa i indeksi niza kom cena pripada, razdvojena tačkama ili
+                    ograđena uglastim zagradama.<br>
+                    <span class="text-green ml-3">
+                        Cena.[1]
+                    </span><br>
+                    ili<br>
+                    <span class="text-green ml-3">
+                        ["Cena"][1]
+                    </span><br>
+                </p>
+            </div>
+        </div>
 
     </div>
     <footer class="bg-dark py-3">
