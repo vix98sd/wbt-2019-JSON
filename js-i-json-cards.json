@@ -1,0 +1,22 @@
+[
+    {
+      "naslov1": "Objašnjenje parsiranja",
+      "naslov2": "Šta je to parsiranje?",
+      "paragraf1": "Parsiranje predstavlja raščlanjivanje podataka prestavljenih u JSON zapisu i kreiranje JavaScript objekata od dobijenih članova. Iako su veoma slični, JSON objekat nije isto što i JavaScript objekat!",
+      "paragraf2": "Neke od razlika između JSON strukture i strukture objekata kod JavaScripta su to što kod JSON strukture ime može biti bilo koji validan string, uključujući i beline, dok kod JavaScript-a ovo nije dozvoljeno. Takođe, kod JSON strukture ime mora biti navedeno između dvostrukih navodnika, dok se kod JavaScripta oni ni ne koriste.",
+      "paragraf3": "Zbog ovih nepoklapanja u strukturama objekata neophodno je izvršiti “prevođenje” objekta u JSON zapisu u JavaScript objekat.",
+      "paragraf4": "Ovaj postupak se naziva parsiranje.",
+      "btn-txt":"",
+      "btn-href":""
+    },
+    {
+      "naslov1": "Koraci u parsiranju",
+      "naslov2": "Koji bi to bili koraci u parsiranju?",
+      "paragraf1": "∙ Preuzimanje podataka u JSON zapisu sa web servera.",
+      "paragraf2": "∙ Smeštanje JSON zapisa u objekat.",
+      "paragraf3": "∙ Parsiranje JSON zapisa.",
+      "paragraf4": "∙ Smeštanje podataka u za to predviđene varijable.",
+      "btn-txt":"Pogledaj primere",
+      "btn-href":"primeri.html"
+    }
+]
