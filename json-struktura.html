@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON - Template</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="json-struktura.css">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid mb-0" style="background-image: url(pics/main.jpg);background-position: top;">
+        <div class="container text-center" style="color: white;">
+            <h1 class="display-4">Želite da saznate šta je to JSON?</h1>
+            <p class="lead">Na pravom ste mestu!</p>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <a class="navbar-brand mr-auto" href="pocetna.html">JSON</a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link active" href="#">Početna<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="vise-o-json-u.html">Više o JSON-u</a>
+                    <a class="nav-item nav-link" href="json-struktura.html">JSON struktura</a>
+                    <a class="nav-item nav-link " href="json-tipovi-podataka.html">JSON tipovi podataka</a>
+                    <a class="nav-item nav-link " href="json-vs-xml.html">JSON vs XML</a>
+                    <a class="nav-item nav-link " href="javascript-i-json.html">JavaScript i JSON</a>
+                    <a class="nav-item nav-link " href="primeri.html">Primeri</a>
+                    <a class="nav-item nav-link " href="o-nama.html">O nama</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- TELO U KOME TREBA PISATI KOD -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col text-center">
+                <p class="h3 m-3">JSON struktura</p>
+                <hr class="heading-line">
+            </div>
+        </div>
+
+        <p class="lead">
+            JSON predstavlja tekstualnu datoteku čiji format podseća na format objekta koji podržava programski jezik
+            JavaScript.<br><br>
+        </p>
+        <div class="row mb-3">
+            <div class="col-lg-6 col-md-12">
+                <p class="lead">JSON takođe podržava iste tipove podataka kao i standardni JavaScript objekti:</p>
+                <ul>
+                    <li>
+                        <ul>
+                            <p class="lead">Prosti tipovi</p>
+                            <li>
+                                <p class="lead">String (kao tekstualni tip)</p>
+                            </li>
+                            <li>
+                                <p class="lead">Number (kao brojčani tip)</p>
+                            </li>
+                            <li>
+                                <p class="lead">Boolean (kao istinitosni tip)</p>
+                            </li>
+                            <li>
+                                <p class="lead">null (kao nepostojeća vrednost)</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <p class="lead">Složeni tipovi</p>
+                            <li>
+                                <p class="lead">Array (kao niz prostih tipova)</p>
+                            </li>
+                            <li>
+                                <p class="lead">Ostali objektni literali</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-lg-6 col-md-12 bg-dark">
+                <code>
+                    <ul class="list-unstyled ml-5">
+                        <li>{<span class="arrow">&longleftarrow;Početak objekta</span></li>
+                        <li>&emsp;"Naziv": <span class="text-green">"Ubiti pticu rugalicu"</span>,</li>
+                        <li>&emsp;"Author": <span class="text-green">"Robert Galbraith"</span>,</li>
+                        <li>&emsp;"Žanr": <span class="text-green">"klasik krimi novela"</span>,</li>
+                        <li>&emsp;"Detalji": {<span class="arrow">&longleftarrow;Početak objekta</span></li>
+                        <li>&emsp;&emsp;"Izdavač": <span class="text-green">"Little Brown"</span>,<span class="arrow">&longleftarrow;Tekstualni tip</span></li>
+                        <li>&emsp;&emsp;"Godina_Izdavanja": <span class="text-purple">2013<span class="arrow">&longleftarrow;Numerički tip</span></span>,</li>
+                        <li>&emsp;&emsp;"ISBN-13": <span class="text-purple">9781408704004</span>,</li>
+                        <li>&emsp;&emsp;"Jezik": <span class="text-green">"Srpski"</span>,</li>
+                        <li>&emsp;&emsp;"Strana": <span class="text-purple">494</span></li>
+                        <li>&emsp;},<span class="arrow">&longleftarrow;Kraj objekta</span></li>
+                        <li>&emsp;"Cena": [<span class="arrow">&longleftarrow;Početak niza</span></li>
+                        <li>&emsp;&emsp;{<span class="arrow">&longleftarrow;Početak objekta</span></li>
+                        <li>&emsp;&emsp;&emsp;"Tip": <span class="text-green">"Tvrde korice"</span>,</li>
+                        <li>&emsp;&emsp;&emsp;"Cena": <span class="text-purple">1660</span>,</li>
+                        <li>&emsp;&emsp;},<span class="arrow">&longleftarrow;Kraj objekta</span></li>
+                        <li>&emsp;&emsp;{<span class="arrow">&longleftarrow;Početak objekta</span></li>
+                        <li>&emsp;&emsp;&emsp;"Tip": <span class="text-green">"Džepno izdanje"</span>,</li>
+                        <li>&emsp;&emsp;&emsp;"Cena": <span class="text-purple">700</span>,</li>
+                        <li>&emsp;&emsp;}<span class="arrow">&longleftarrow;Kraj objekta</span></li>
+                        <li>&emsp;]<span class="arrow">&longleftarrow;Kraj niza</span></li>
+                        <li>}<span class="arrow">&longleftarrow;Kraj objekta</span></li>
+                    </ul>
+                </code>
+            </div>
+        </div>
+
+
+
+    </div>
+    <footer class="bg-dark py-3">
+
+        <ul class="nav text-white text-center justify-content-center flex-column flex-sm-row">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Upoznajte nas!</a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

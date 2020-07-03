@@ -1,0 +1,21 @@
+hr.heading-line {
+    width: 20%;
+    height: 4px;
+    background-color: #445D48;
+}
+
+code {
+    font-size: medium;
+}
+
+span.text-green {
+    color: mediumseagreen;
+}
+
+span.text-purple {
+    color: violet;
+}
+
+span.arrow {
+    color: wheat;
+}
