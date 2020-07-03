@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON - Template</title>
+    <title>JSON - Primeri</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
-
+    <link rel="stylesheet" href="javascript-i-json.css">
 
 </head>
 <body>
@@ -42,7 +42,135 @@
     <!-- TELO U KOME TREBA PISATI KOD -->
     <div class="container">
         
-        <p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p>
+        <div class="jumbotron text-center pb-4">
+            <h1 class="display-3">Primeri korišćenja JSONa</h1>
+            <hr class="heading-line">
+            <p class="lead">Kako koristiti JSON u JavaScript kodu?</p>
+            <hr class="my-2">
+            <p>Na ovoj stranici ćete pronaći dva primera. U prvom se vrši parsiranje JSONa koji je hard-kodovan u varijabli, dok u drugom primeru možete saznati više o povlačenju JSONa sa udaljenog web servera.</p>
+            <p class="lead mt-4">
+                <a class="btn btn-dark btn-lg" href="#prvi-primer" role="button">Prvi primer</a>
+                <a class="btn btn-dark btn-lg" href="#drugi-primer" role="button">Drugi primer</a>
+            </p>
+        </div>
+        
+        <div id="prvi-primer" class="jumbotron bg-white text-center pb-0 mb-0">
+            <h1 class="display-5">Primer parsiranja</h1>
+            <hr class="heading-line">
+            <hr class="mt-2 mb-4">
+            <p>U ovom primeru predstavljeno je parsiranje JSON objekta koji sadrži podatke o nekoliko zaposlenih i ispisivanje tih podataka u paragrafe.</p>
+            <p>Za početak je potrebno kreirati tri paragrafa u <body> delu stranice, ovim paragrafima će biti pristupano preko ID-a, te smo svakom dodelili različiti ID, ali tako da se razlikuje samo završni broj. </p>
+            
+            <div class="row my-5">
+                <div class="col-md-4 offset-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <pre class="card-text">
+&lt;p id="demo0"&gt;&lt;/p&gt;
+&lt;p id="demo1"&gt;&lt;/p&gt;
+&lt;p id="demo2"&gt;&lt;/p&gt;</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>Nakon kreiranja paragrafa prelazimo na kreiranje objekta JSON strukture. Ovaj deo koda se upisuje u &lt;script&gt; delu, ili unutar JavaScript odvojenog fajla. Sav ostali kod koji ćemo pisati u okviru ovog primera, takođe upisujemo u ovom delu. </p>
+            
+            <div class="row my-5">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <pre class="card-text text-left">
+var zaposleni =  
+`{ "employees" : [ 
+ { "firstName":"John" , "lastName":"Doe" }, 
+ { "firstName":"Anna" , "lastName":"Smith" }, 
+ { "firstName":"Peter" , "lastName":"Jones" } ]}`;</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>Sada, kada smo kreirali JSON objekat, potrebno je izvršiti parsiranje istog, i podatke prevesti u JavaScript objekat. Ovo se radi jednostavnim pozivanjem funkcije JSON.parse(JSONObjekat). Nakon uspešno obavljenog parsiranja, ostaje nam još da postavimo podatke u prethodno kreirane paragrafe. To radimo sledećim kodom: </p>
+
+            
+            <div class="row my-5">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <pre class="card-text text-left">
+var i; 
+for (i = 0; i &lt; 3; i++) { 
+    document.getElementById("demo" + i).innerHTML = 
+    zaposleniJS.employees[i].firstName 
+    + " " 
+    + zaposleniJS.employees[i].lastName; 
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="drugi-primer" class="jumbotron bg-white text-center pb-0 mb-5">
+            <h1 class="display-5">Primer parsiranja sa web servera</h1>
+            <hr class="heading-line">
+            <hr class="mt-2 mb-4">
+            <p>U ovom primeru ćemo prikazati kreiranje tabele pomoću jQuery biblioteke i Bootstrapa, tako što podatke preuzimati iz JSONa koji se nalazi online, na linku https://jsonplaceholder.typicode.com/posts. Za potrebe ovog primera, prvo smo kreirali dugme(id dugmeta je “show_table”) korišćenjem Bootstrapa, na čiji će se klik prikazati tabela. A nakon toga kreirali smo prazan div(id diva je “forTable”) u koji ćemo smestiti sav sadržaj tabele.</p>
+            
+            <div class="row my-5">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <pre class="card-text text-left">
+&lt;button id="show_table" type="button" class="btn btn-primary">
+    Prikaži tabelu
+&lt;/button> 
+&lt;div id="forTable">&lt;/div> </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>Kada smo dodali dugme i div, potrebno je preći na deo u kome preuzimamo podatke iz JSONa, te iste te podatke prebacujemo u JavaScript objekat, i popunjavamo tabelu. Prvo ćemo prikazati kod, a u nastavku ćemo ga i opisati. Ovaj kod se može pisati takođe u &lt;script> tagu, ili u odvojenom JavaScript fajlu, mi smo izabrali drugu opciju. </p>
+            
+            <div class="row my-5">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <pre class="card-text text-left">
+$('#show_table').click(function(){ 
+        $.get('https://jsonplaceholder.typicode.com/posts', function(data){ 
+            $('#forTable').addClass("table table-striped px-auto"); 
+            $('#forTable').append(`
+                &lt;thead>&lt;tr>
+                    &lt;th scope="col">ID&lt;/th>
+                    &lt;th scope="col">Title&lt;/th>
+                    &lt;th scope="col">Body&lt;/th>
+                &lt;/tr>&lt;/thead>'); 
+            var tbody = '&lt;tbody>`; 
+            for(var i = 0; i &lt; data.length; i++){ 
+              tbody += `&lt;tr>
+                                &lt;td>${data[i].id}&lt;/td>
+                                &lt;td>${data[i].title}&lt;/td>
+                                &lt;td>${data[i].body}&lt;/td>
+                        &lt;/tr>`; 
+            } 
+            tbody += '&lt;/tbody>'; 
+            $('#forTable').append(tbody); 
+        }); 
+    });</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>U gorenavedenom kodu smo podesili da se na događaj (klik mišem na kreirano dugme) izvrši preuzimanje podataka iz JSON zapisa, koji se nalazi na web serveru, a nakon toga izvrši popunjavanje stringa kodom tabele, i na kraju smeštanje tog strigna u div koji smo namenili za držanje tabele. </p>
+            <p>Get funkcijom iz jQuery biblioteke preuzimamo JSON zapis sa linka koji je naveden kao prvi parametar, dok kao drugi parametar navodimo funkciju koja će se izvršiti nakon što se uspešno preuzme i parsira JSON zapis. Kao argument ove funkcije upisujemo naziv promenljive u koju će se smestiti parsirani JavaScript objekat dobijen iz JSON zapisa. Funkcija get automatski izvršava parsiranje, i novodobijeni objekat šalje direktno u funkciju. U narednim linijama koda izvršavamo prosto kreiranje tabele, i dodavanje vrednosti iz parsiranog fajla, što je objašnjeno u prethodnom primeru. </p>
+
+        </div>
     
     </div>
     <footer class="bg-dark py-3">
